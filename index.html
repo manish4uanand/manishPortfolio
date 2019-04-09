@@ -28,11 +28,18 @@
     var roles = [ 'Ruby on Rails Developer','Backend Developer', 'Frontend Developer', 'Full-Stack Developer' ];
     var roleId = 0;
     window.setInterval(function () {
-      $('#role').html(roles[roleId]);
+
+      if(roles[roleId] == "Ruby on Rails Developer"){
+        $("#line_break").css("display","block");
+        $('#role').html(roles[roleId]);
+      }else{
+        $("#line_break").css("display","none");
+        $('#role').html(roles[roleId]);
+      }
       roleId = roleId + 1;
       if(roleId >= roles.length) {
         roleId = 0;
-      }
+      }        
     }
     , 2000);
   </script>
@@ -114,15 +121,7 @@
           <a href="https://www.linkedin.com/in/manish-anand-49b16745/">
             <i class="fa fa-linkedin">
             </i>
-          </a>
-            <!-- <a href="https://www.instagram.com/vik_avi/">
-              <i class="fa fa-instagram">
-              </i>
-            </a>
-            <a href="https://twitter.com/avik1526">
-              <i class="fa fa-twitter">
-              </i>
-            </a> -->
+          </a>            
           </div>
         </div>
       </div>
@@ -131,14 +130,14 @@
         <img src="images/menuclose.png" id="menuclose"/>
         <div class="introdiv">
           <h2>hello i'm
-            <span class="name" id="role">Manish Anand 
+            <span id="line_break" style="display: none;"><br></span>
+            <span class="name" id="role">
+              Manish Anand 
             </span>
           </h2>
-          <div style="clear:both;">
-          </div>
+          <div style="clear:both;"></div>
           <span id="viewresume">
-            <a href="resume.pdf">view resume
-            </a>
+            <a href="ResumeManishAnand.pdf" target="_blank?" style="text-decoration: none;">view resume</a>
           </span>
         </div>
       </div>
@@ -167,9 +166,7 @@
           <h2 class="headingtext wow fadeInUp">Services</h2>
           <div class="workbox">
             <p id="serv1">
-              Articulate designs and refined developing interfaces beautifully enforces his user task flows, communication, interaction & end to end scenarios templates. His job is not only adjusting with content,
-              colour and graphs but also transforming virtual process into real structure by analysing and optimising the product.
-              He enjoys giving life to structures with elegant codes and logic written by him to churn out the  best. His source of inspiration comes from sports and riding which helps him to deliver the work a minute before deadline.
+              Articulate designs and refined developing interfaces beautifully enforce his user task flows, communication, interaction & end to end scenarios templates. His job is not only adjusting with content, color, and graphs but also transforming the virtual process into the real structure by analyzing and optimizing the product. He enjoys giving life to structures with elegant codes and logic written by him to churn out the best. His source of inspiration comes from sports and riding which helps him to deliver the work a minute before the deadline.
             </p>
             <p>Main primary services which he deals are Web application design, wireframing/mockup.</p>
             <ul class="col-md-12 wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="700ms">
@@ -394,7 +391,11 @@
         </i>
       </a>
 
-      <div class="bottomresume"><span><a href="Resume_MANISH.docx">view resume</a></span></div>
+      <div class="bottomresume">
+        <span>
+          <a href="ResumeManishAnand.pdf" target="_blank?" style="text-decoration: none;">view resume</a>
+        </span>
+      </div>
     </div>
   </div>
 
